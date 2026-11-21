@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 754" width="710" height="754" role="img" aria-labelledby="title desc" xml:lang="uk">
+<title id="title">Модель педагогічних умов підтримки навчальної мотивації</title>
+<desc id="desc">Чотирьом педагогічним умовам відповідають пояснювальні механізми. Зворотний зв’язок від слухача допомагає викладачеві змінювати умови. Стрілки позначають теоретичні припущення.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#33424a"/></marker></defs>
+<rect width="710" height="754" fill="white"/>
+<g fill="#172026" font-family="Times New Roman, Liberation Serif, serif" font-size="20">
+<rect x="15" y="8" width="654" height="67" rx="7" fill="#edf2f5" stroke="#44515a" stroke-width="1.4"/>
+<text x="342" y="34" font-weight="bold" text-anchor="middle">Контекст навчання</text>
+<text x="342" y="58" font-size="17" text-anchor="middle">Клінічна відповідальність, воєнні загрози, дистанційний формат</text>
+<path d="M163 75 V102" fill="none" stroke="#33424a" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="15" y="106" width="295" height="39" rx="6" fill="#edf2f5" stroke="#44515a" stroke-width="1.4"/>
+<text x="163" y="132" font-weight="bold" text-anchor="middle">Педагогічні умови</text>
+<text x="524" y="132" font-weight="bold" text-anchor="middle">Ймовірні механізми</text>
+<rect x="15" y="155" width="295" height="54" rx="7" fill="#f1f4f5" stroke="#44515a" stroke-width="1.4"/>
+<text x="162.5" y="178" font-size="18" text-anchor="middle">Клінічна значущість</text>
+<text x="162.5" y="199" font-size="18" text-anchor="middle">і вибір запиту</text>
+<rect x="379" y="155" width="290" height="54" rx="7" fill="white" stroke="#44515a" stroke-width="1.4"/>
+<text x="524" y="178" font-size="18" text-anchor="middle">Сприйнята цінність</text>
+<text x="524" y="199" font-size="18" text-anchor="middle">і прийняття мети</text>
+<path d="M310 182 H373" fill="none" stroke="#33424a" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="15" y="224" width="295" height="54" rx="7" fill="#f1f4f5" stroke="#44515a" stroke-width="1.4"/>
+<text x="162.5" y="247" font-size="18" text-anchor="middle">Поетапне розв’язання</text>
+<text x="162.5" y="268" font-size="18" text-anchor="middle">і формувальний відгук</text>
+<rect x="379" y="224" width="290" height="54" rx="7" fill="white" stroke="#44515a" stroke-width="1.4"/>
+<text x="524" y="247" font-size="18" text-anchor="middle">Відчуття поступу</text>
+<text x="524" y="268" font-size="18" text-anchor="middle">й очікування успіху</text>
+<path d="M310 251 H373" fill="none" stroke="#33424a" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="15" y="293" width="295" height="54" rx="7" fill="#f1f4f5" stroke="#44515a" stroke-width="1.4"/>
+<text x="162.5" y="316" font-size="18" text-anchor="middle">Безпечний діалог</text>
+<text x="162.5" y="337" font-size="18" text-anchor="middle">і наставництво</text>
+<rect x="379" y="293" width="290" height="54" rx="7" fill="white" stroke="#44515a" stroke-width="1.4"/>
+<text x="524" y="316" font-size="18" text-anchor="middle">Належність до спільноти</text>
+<text x="524" y="337" font-size="18" text-anchor="middle">і доступність допомоги</text>
+<path d="M310 320 H373" fill="none" stroke="#33424a" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="15" y="362" width="295" height="54" rx="7" fill="#f1f4f5" stroke="#44515a" stroke-width="1.4"/>
+<text x="162.5" y="385" font-size="18" text-anchor="middle">Адаптивна організація</text>
+<text x="162.5" y="406" font-size="18" text-anchor="middle">і повернення до роботи</text>
+<rect x="379" y="362" width="290" height="54" rx="7" fill="white" stroke="#44515a" stroke-width="1.4"/>
+<text x="524" y="385" font-size="18" text-anchor="middle">Менші витрати зусиль</text>
+<text x="524" y="406" font-size="18" text-anchor="middle">на відновлення роботи</text>
+<path d="M310 389 H373" fill="none" stroke="#33424a" stroke-width="1.8" marker-end="url(#arr)"/>
+<path d="M669 182 H685 V388 H669" fill="none" stroke="#33424a" stroke-width="1.8"/>
+<path d="M669 251 H685" fill="none" stroke="#33424a" stroke-width="1.8"/>
+<path d="M669 320 H685" fill="none" stroke="#33424a" stroke-width="1.8"/>
+<path d="M685 388 V446 H521 V459" fill="none" stroke="#33424a" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="15" y="465" width="654" height="68" rx="7" fill="#e7eef0" stroke="#44515a" stroke-width="1.4"/>
+<text x="342" y="492" font-weight="bold" text-anchor="middle">Очікувана мотиваційна підтримка</text>
+<text x="342" y="517" font-size="16" text-anchor="middle">Готовність узятися за значуще завдання, продовжити або відновити його</text>
+<path d="M342 533 V550" fill="none" stroke="#33424a" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="15" y="555" width="654" height="66" rx="7" fill="white" stroke="#44515a" stroke-width="1.4"/>
+<text x="342" y="582" font-weight="bold" text-anchor="middle">Зворотний зв’язок від слухача</text>
+<text x="342" y="605" font-size="17" text-anchor="middle">Що стало зрозумілішим, яке питання або перешкода залишилися?</text>
+<path d="M15 590 H4 V126 H13" fill="none" stroke="#33424a" stroke-width="1.8" marker-end="url(#arr)" stroke-dasharray="6 4"/>
+<rect x="15" y="648" width="654" height="79" rx="7" fill="#f7f8f8" stroke="#44515a" stroke-width="1.4"/>
+<text x="342" y="674" font-weight="bold" text-anchor="middle">Застосовність зв’язків залежить від обставин</text>
+<text x="342" y="697" font-size="17" text-anchor="middle">Підготовка й повноваження учасника, доступ до наставника,</text>
+<text x="342" y="718" font-size="17" text-anchor="middle">безпечний час, навантаження та зв’язок</text>
+</g>
+</svg>
