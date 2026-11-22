@@ -86,8 +86,9 @@ def configure(d):
     for name in ["Caption", "ThesisTitle"]:
         d.styles[name].paragraph_format.alignment = Align.CENTER
     d.styles["ThesisTable"].paragraph_format.alignment = Align.LEFT
-    d.styles["ThesisTOC"].paragraph_format.line_spacing = 1.0
-    d.styles["ThesisTOC"].paragraph_format.space_after = Pt(3)
+    d.styles["ThesisTOC"].paragraph_format.alignment = Align.LEFT
+    d.styles["ThesisTOC"].paragraph_format.line_spacing = 1.5
+    d.styles["ThesisTOC"].paragraph_format.space_after = Pt(0)
     d.styles["ThesisRef"].paragraph_format.alignment = Align.LEFT
     d.styles["ThesisRef"].paragraph_format.left_indent = Mm(8)
     d.styles["ThesisRef"].paragraph_format.first_line_indent = Mm(-8)
@@ -200,7 +201,7 @@ def toc(d, headings, pages):
 def add_table(d, content, table_number):
     caption, data = content
     num, label = caption.split(" — ", 1)
-    widths = [36, 49, 57, 28] if table_number == 1 else [32, 43, 47, 48]
+    widths = [36, 49, 57, 28] if table_number == 1 else [39, 42, 45, 44]
     for s, align in [(num, Align.RIGHT), (label, Align.CENTER)]:
         p = d.add_paragraph(s, style="ThesisPlain")
         p.alignment = align
@@ -226,8 +227,7 @@ def add_table(d, content, table_number):
             p = cell.paragraphs[0]
             p.style = "ThesisTable"
             p.paragraph_format.keep_with_next = ri < len(data)-1
-            # Compact spacing within table cells, full thesis type size.
-            p.paragraph_format.line_spacing = 1
+            p.paragraph_format.line_spacing = 1.5
             p.paragraph_format.space_after = Pt(2)
             p.paragraph_format.space_before = Pt(2)
             p.add_run(value).bold = not ri
@@ -254,6 +254,11 @@ def assemble(events, headings, pages, image, path):
             p.add_run().add_picture(str(image), width=Mm(156))
             p = d.add_paragraph(value, style="Caption")
             p.paragraph_format.keep_together = True
+        elif re.search(r" _{5,}$", value):
+            p = d.add_paragraph(style="ThesisPlain")
+            p.alignment = Align.LEFT
+            p.paragraph_format.tab_stops.add_tab_stop(Mm(167), WD_TAB_ALIGNMENT.RIGHT, WD_TAB_LEADER.LINES)
+            p.add_run(re.sub(r" _{5,}$", "", value) + "\t\u00a0")
         else:
             p = d.add_paragraph(style="ThesisRef" if tag == "ref" else "Normal")
             rich(p, value)
