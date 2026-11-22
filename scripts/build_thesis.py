@@ -27,8 +27,8 @@ SOURCES = [ROOT / "drafts" / (n + ".md") for n in
 SOURCES += [ROOT / "appendices" / ("appendix_" + str(i) + ".md") for i in (1, 2)]
 
 
-def element(name, **attrs):
-    e = OxmlElement("w:" + name)
+def element(tag, **attrs):
+    e = OxmlElement("w:" + tag)
     for key, value in attrs.items():
         e.set(qn("w:" + key), str(value))
     return e
@@ -265,6 +265,9 @@ def normalize(text):
 
 
 def locate(pdf, headings):
+    outline = pdf.get_toc()
+    if len(outline) == len(headings) and all(normalize(row[1]).casefold() == normalize(h).casefold() for row, (_, h) in zip(outline, headings)):
+        return [row[2] for row in outline]
     contents = [normalize(p.get_text()) for p in pdf]
     page_nos = []
     start = next(i for i in range(2,len(pdf)) if contents[i].lstrip("0123456789 ").startswith("ВСТУП"))

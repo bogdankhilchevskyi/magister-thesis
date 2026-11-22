@@ -20,5 +20,8 @@ for j,i in enumerate(selected):
     thumbs.paste(im,(x,y))
     ImageDraw.Draw(thumbs).text((x+12,y+425),str(i+1),fill='black')
 thumbs.save(proof/'preview.jpg',quality=84)
-manifest={'pages':len(doc),'fonts':fonts,'outline':doc.get_toc(), 'page_sizes':list({str(p.rect) for p in doc}), 'links':[(i+1,len(p.get_links())) for i,p in enumerate(doc) if p.get_links()][:8], 'blank':[i+1 for i,s in enumerate(texts) if len(s.strip())<5], 'headers':[p.get_text(clip=fitz.Rect(0,0,595,49)).strip() for p in doc], 'overview':{str(i+1):' '.join(texts[i].split())[:130] for i in selected}}
+toc_pages={i for i in range(1,min(4,len(doc))) if doc[i].get_links()}
+row_heads=['Психологічні','Педагогічні','Технологічні','Соціальні','Організаційні','Клінічна значущість і вибір запиту','Поетапне розв’язання і формувальний відгук','Безпечний діалог і наставництво','Адаптивна організація і повернення']
+detailed={str(i+1):[{'kind':v['kind'],'page':v.get('page'),'name':v.get('nameddest')} for v in doc[i].get_links()] for i in toc_pages}
+manifest={'toc_links':detailed,'tables':{str(i+1):' '.join(t.split())[-170:] for i,t in enumerate(texts) if any(w in t for w in ['Таблиця 2.','Джерельна опора','Джерельна','Межа застосування та джерела'])},'pages':len(doc),'fonts':fonts,'outline':doc.get_toc(), 'page_sizes':list({str(p.rect) for p in doc}), 'links':[(i+1,len(p.get_links())) for i,p in enumerate(doc) if p.get_links()][:8], 'blank':[i+1 for i,s in enumerate(texts) if len(s.strip())<5], 'headers':[p.get_text(clip=fitz.Rect(0,0,595,49)).strip() for p in doc], 'overview':{str(i+1):' '.join(texts[i].split())[:130] for i in selected}}
 (proof/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False),encoding='utf-8')
