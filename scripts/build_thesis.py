@@ -200,7 +200,7 @@ def toc(d, headings, pages):
 def add_table(d, content, table_number):
     caption, data = content
     num, label = caption.split(" — ", 1)
-    widths = [29, 49, 64, 28] if table_number == 1 else [32, 43, 47, 48]
+    widths = [36, 49, 57, 28] if table_number == 1 else [32, 43, 47, 48]
     for s, align in [(num, Align.RIGHT), (label, Align.CENTER)]:
         p = d.add_paragraph(s, style="ThesisPlain")
         p.alignment = align
